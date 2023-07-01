@@ -1,0 +1,6 @@
+<div>
+    <input type="text" [value]="newTaskName" (keyup)="setNewTaskName($event)">
+    <button type="button" (click)="addTask()">OK</button>
+</div>
+
+<app-task *ngFor="let task of taskList" [isDone]="task.isDone" [id]="task.id" [taskName]="task.taskName" (deleteEvent)="removeTask($event)"></app-task>

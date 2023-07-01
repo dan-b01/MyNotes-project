@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyNotes';
+
+
+}
+interface Task{
+  isDone: boolean;
+  taskName: string;
 }
