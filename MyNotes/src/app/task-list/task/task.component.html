@@ -1,4 +1,4 @@
-<div>
+<div [id]="id">
     <input type="checkbox" [checked]="isDone" (change)="checkTask($event)">
     <input type="text" [value]="taskName" [class.task-done]="isDone">
     <button type="button" (click)="emitDeleteEvent()">X</button>

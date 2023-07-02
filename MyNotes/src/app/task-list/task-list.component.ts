@@ -28,15 +28,9 @@ export class TaskListComponent {
     this.newTaskName = "";
   }
 
-  removeTask(e:any) {
-
-    var i = this.taskList.findIndex(el => el.id==e);
-    
-    this.taskList.forEach((task, index) => {
-      if(task.id==i) this.taskList.splice(index,1);
-    });
-
-    this.maxId--;
+  removeTask(taskId:number) {
+    var taskIndex = this.taskList.findIndex(t => t.id===taskId);
+    this.taskList.splice(taskIndex,1)
   }
 
 }
